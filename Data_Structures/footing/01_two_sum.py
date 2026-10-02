@@ -52,6 +52,3 @@ def calculate_stats(*args, operation="mean"):
     
 print(calculate_stats(1, 2, 3, 4, 5, operation="median"))
 
-
-
-    
