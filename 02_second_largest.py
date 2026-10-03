@@ -1,27 +1,23 @@
-# highest on str
 def largest(word):
-    highest = 0
+    highest = -1
     word = list(word)
-    print(word)
     for w in word:
         if w.isdigit():
              w = int(w)
              if highest < w:
                highest = w
     return highest           
-# print(largest('dfa12321afd'))
+ 
 def second_largest(word):
-    print('jjjj')
-    max_num = largest(word)
-    print(largest)
+    highest = largest(word)
     word = list(word)
-    second_largest = 0
+    second_highest = -1
     for w in word:
-        if w.isdigit() != max_num:
+        if w.isdigit():
             w = int(w)
-            if second_highest < w:
-               second_highest = w
-               return second_largest
-          
-    
-print(second_largest('dfa12321afd'))    
+            if w != highest:
+              if second_highest < w:
+                second_highest = w
+    return second_highest
+              
+print(second_largest('dfa12321908afd'))    
