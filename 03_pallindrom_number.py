@@ -1,10 +1,11 @@
 def pallindrom(num):
     num = list(str(num))
     j = len(num) - 1
-    for i in range(len(num)):
-        if num[i] == num[j]:
-            print(num[i] , num[j])
-            return True
-        else: False
+    for i in range(len(num) // 2):
+        if num[i] != num[j]:
+            return "not Pallindrom"
+        else: j -= 1     
+    return "Pallindrom"
+        
     
-pallindrom(1212)    
+print(pallindrom(1221))    
